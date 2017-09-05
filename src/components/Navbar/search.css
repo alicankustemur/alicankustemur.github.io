@@ -1,0 +1,15 @@
+.ui-menu-item{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    padding: 3px;
+    width: 100%;
+
+}
+
+.search{
+    width: 200px !important;
+    position: relative;
+    top: 5px;
+    left: 20px;
+    right: 10px;
+}
