@@ -1,0 +1,95 @@
+@import url(navbar.css);
+@import url(hr.soften.css);
+@import url(footer-distributed.css);
+@import url(pagination.css);
+@import url(horizontal-scroll.css);
+@import url(search-autocomplete.css);
+@import url(ajaxLoading.css);
+
+/* jquery autocomplete
+@import url(https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css);
+
+.ui-autocomplete{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+
+@import url(plugins/lightbox2-master/dist/css/lightbox.css);
+
+*/
+.center {
+	text-align: center;
+}
+
+.top5 { margin-top:5px; }
+.top7 { margin-top:7px; }
+.top10 { margin-top:10px; }
+.top15 { margin-top:15px; }
+.top17 { margin-top:17px; }
+.top30 { margin-top:30px; }	
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+
+}
+
+.to-top{
+  padding: 10px;
+  background-color: #222222;
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+}
+
+
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	.pagination{
+		position: absolute;
+		bottom: 0px;
+	
+	}
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	.pagination{
+		position: relative;
+		bottom: 0px;
+	}
+}
+
+.post-pagination{
+	text-align: center;
+}
+
+.center{
+	text-align:center;
+}
+
+.img-center{
+	margin: 0 auto;
+}
+.img-border
+{
+	 box-shadow: 8px 8px 10px #aaa;
+-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;
+}
