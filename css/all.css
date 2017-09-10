@@ -1,0 +1,72 @@
+@import url(left-sidebar.css);
+@import url(navbar.css);
+@import url(hr.soften.css);
+@import url(footer-distributed.css);
+@import url(pagination.css);
+@import url(horizontal-scroll.css);
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+}
+.center {
+	text-align: center;
+}
+
+.top5 { margin-top:5px; }
+.top7 { margin-top:7px; }
+.top10 { margin-top:10px; }
+.top15 { margin-top:15px; }
+.top17 { margin-top:17px; }
+.top30 { margin-top:30px; }	
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+
+}
+
+.to-top{
+  padding: 10px;
+  background-color: #222222;
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+}
+
+
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	.pagination{
+		position: absolute;
+		bottom: 0px;
+	
+	}
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+	.pagination{
+		position: relative;
+		bottom: 0px;
+	}
+}
+
+.post-pagination{
+	text-align: center;
+}
