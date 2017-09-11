@@ -28,9 +28,9 @@ export default class Content extends Component {
     componentDidMount() {
 
         let paginationProps = {
-            pageLimit: 5,
+            pageLimit: 6,
             postCount: posts.length,
-            pageCount: Math.ceil(posts.length / 5)
+            pageCount: Math.ceil(posts.length / 6)
         };
 
         this.createPosts(paginationProps, 1);
@@ -63,7 +63,9 @@ export default class Content extends Component {
 
             if (i >= currentPostNumber && i < (currentPostNumber + props.pageLimit)) {
                 postArray.push(
-                    <Post post={post} key={i}/>
+                    <div>
+                        <Post post={post} key={i}/>
+                    </div>
                 );
             }
 

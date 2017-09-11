@@ -3,3 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+div.post-content > img {
+  width: 200px !important;
+}
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

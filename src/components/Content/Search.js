@@ -48,9 +48,8 @@ export default class Search extends Component {
 
     resultRow(post, index) {
         return (
-            <ListGroupItem key={index} header={post.title} onClick={ () => this.goToPath("/post?id=" + post.id)}>
-            </ListGroupItem>
-        )
+            <ListGroupItem key={index} header={post.title} onClick={ () => this.goToPath("/post?id=" + post.id)}/>
+        );
     };
 
     goToPath(path){
@@ -59,15 +58,23 @@ export default class Search extends Component {
 
     resultList() {
 
-        let contractRowArray = [];
+        let resultRowArray = [];
 
-        this.state.posts.forEach((row, index) => {
-            contractRowArray.push(
-                this.resultRow(row, index)
+        if(this.state.posts.length > 0){
+            this.state.posts.forEach((row, index) => {
+                resultRowArray.push(
+                    this.resultRow(row, index)
+                );
+            });
+        }else if(this.state.tag !== ""){
+            resultRowArray.push(
+                <h4><strong>{this.state.tag}</strong> ile ilgili herhangi bir sonuç bulunamamıştır.</h4>
             );
-        });
+        }
 
-        return contractRowArray;
+
+
+        return resultRowArray;
 
     };
 

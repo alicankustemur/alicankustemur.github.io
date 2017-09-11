@@ -84,6 +84,7 @@ export default class MegaDropDownMenu extends Component {
 
     searchByTag(tag) {
         hashHistory.push("/search?tag=" + tag);
+        $(".mega-dropdown-menu-body").css("display","none");
     }
 
     dropDown() {

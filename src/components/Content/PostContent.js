@@ -3,12 +3,11 @@ import {Col} from "react-bootstrap";
 import moment from 'moment';
 import 'moment/locale/tr';
 import ReactDisqusThread from "react-disqus-thread";
+import $ from "jquery";
 
 import posts from "../../posts.json";
 
 import  "./PostContent.css";
-
-const homeTitle = "ali can kuştemur | bir programcının hayal dünyası";
 
 const contentStyle = {
     "fontSize": "15px",
@@ -32,12 +31,9 @@ export default class PostContent extends Component {
 
     render() {
 
-        if (window.location.href.includes("loaded")) {
-            document.title = this.state.post.title + " - " + homeTitle;
-        }
         return (
             <div>
-                <Col lg={9} md={9} sm={12} style={contentStyle}>
+                <Col lg={9} md={9} sm={12} style={contentStyle} className="post-content">
                     <h2 className="post-title">{this.state.post.title}</h2>
                     <hr/>
                     <p className="post-date"><span className="fa fa-clock-o"></span> {this.state.post.date}</p>
@@ -81,7 +77,7 @@ export default class PostContent extends Component {
             let javaKeywordsArray = javaKeywords.split(' ');
 
             for(let i = 0; i < javaKeywordsArray.length; i++){
-                let pattern = "(\\s)"+ javaKeywordsArray[i];
+                let pattern = "\\s"+ javaKeywordsArray[i] +"|" + javaKeywordsArray[i] + "\\s";
                 let regex = new RegExp(pattern,"g");
                 preElementInnerHTML = this.findAndColorize(preElementInnerHTML,regex,"#EE913A");
             }
@@ -102,6 +98,15 @@ export default class PostContent extends Component {
             preElements[i].innerHTML = preElementInnerHTML;
 
         }
+        // set responsive all post images.
+        $(":not(img.logo)img").addClass("img-responsive")
+            .css(
+                {
+                    "width" : "",
+                    "height" : "",
+                    "display":"block",
+                    "margin":"0 auto"
+                });
 
     }
 

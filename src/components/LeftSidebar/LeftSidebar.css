@@ -41,16 +41,6 @@ a > .top5:hover {
     background-color: #ae3910;
 }
 
-.left-sidebar {
-
-    height: -moz-calc(100% - 100px);
-    /* Firefox */
-    height: -webkit-calc(100% - 100px);
-    /* Chrome, Safari */
-    height: calc(100% - 100px);
-    /* IE9+ and future browsers */
-}
-
 .progress-bar-label {
     position: relative;
     top: -7px;
@@ -58,6 +48,7 @@ a > .top5:hover {
 }
 
 div.left-sidebar {
+    height:100%;
     /* IE10+ */
     background-image: -ms-radial-gradient(left top, ellipse farthest-corner, #DD4814 0%, #F59331 100%);
     /* Mozilla Firefox */
@@ -77,7 +68,6 @@ div.left-sidebar {
     -moz-animation: 24s ease infinite;
     -o-animation: 24s ease infinite;
     animation: 24s ease infinite;
-
 @-webkit-keyframes {
     0% {
         background-position: 0% 68%
@@ -144,4 +134,3 @@ h5{
     }
 
 }
-

@@ -1,0 +1,11 @@
+.container{
+    margin-left: 0px !important;
+}
+
+.post-content{
+    z-index: 999;
+}
+
+#disqus_thread{
+    z-index: 0;
+}

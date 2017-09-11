@@ -4,7 +4,7 @@ import {hashHistory} from "react-router";
 import $ from "jquery";
 
 import "./search.css";
-
+import "./Navbar.css";
 import posts from "../../posts.json";
 import MegaDropDownMenu from "./MegaDropDownMenu";
 
@@ -28,7 +28,7 @@ export default class NavbarComponent extends Component {
                     </Nav>
                     <Navbar.Form>
                         <FormGroup>
-                            <FormControl className="search input-sm" placeholder="Ara" />
+                            <FormControl className="search input-sm" placeholder="Ara" style={{ float : "right", "padding-right" : "25px" }}  />
                         </FormGroup>
                     </Navbar.Form>
                 </Navbar.Collapse>
