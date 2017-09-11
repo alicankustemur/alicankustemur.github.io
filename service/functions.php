@@ -55,22 +55,8 @@ function updatePost($id , $title , $content_full , $tags){
     if ($id != null) {
         $connection = getConnection();
         $query = $connection->prepare("UPDATE post SET title = ? , content_full = ? , content_half = ? ,tags = ? WHERE id = ?");
-
         $content_half = "<div style='fontSize=15px !important; text-decoration: none !important;'>";
-
         $content_half .= substr(strip_tags($content_full), 0, 500);
-        $content_half = str_replace("<a","<span",$content_half);
-        $content_half = str_replace("</a>","<span/>",$content_half);
-
-
-        /*$willRemovedTextArray = ["<br />","<br/>","&nbsp;","<strong>","</strong>","<pre>","</pre>","<p>","</p>","</","<ins>","ins>","</ins>","<em>","em>","</em>","<hr/>","<hr />"];
-
-        foreach ($willRemovedTextArray as $text) {
-            $content_half = removeTextFromContent($text,$content_half);
-        }
-*/
-
-
         $content_half .= "... </div>";
         $query->bind_param("sssss", $title, $content_full, $content_half, $tags ,$id);
         if($query){

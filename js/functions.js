@@ -222,13 +222,13 @@ function callFunctions() {
 
     newFeatures();
 
-
-    CKEDITOR.config.height = 450;
+    var contentFullTextArea = document.getElementById('content_full');
+    CKEDITOR.replace(contentFullTextArea).config.height=450;
 
 
     $(document).keypress(function(e) {
         if(e.which == 13) {
-            $(".sendPost").click();
+           // $(".sendPost").click();
         }
     });
 

@@ -9,7 +9,7 @@
  	$id = $_POST["updateId"];
  	$post = getPostById($id);
 
- 	if(isset($_POST["title"]) && isset($_POST["content_full"]) && isset($_POST["tags"])){
+ 	if(isset($_POST["title"]) && isset($_POST["content_full"]) && isset($_POST["tags"]) && isset($_POST["post_image"])){
  		updatePost($_POST["updateId"],$_POST["title"],$_POST["content_full"],$_POST["tags"]);
  		echo "<script> location.href = '/post-panel.php'</script>";
  	}
@@ -31,7 +31,7 @@
 		    <div class="form-group">
 		      <label for="postContent" class="col-lg-1 control-label">içerik</label>
 		      <div class="col-lg-11">
-		        <textarea class="form-control ckeditor"  id="content_full" placeholder="ilk satırı yaz , gerisi gelir." name="content_full" required>
+		        <textarea class="form-control"  id="content_full" placeholder="ilk satırı yaz , gerisi gelir." name="content_full" required>
 					<?=$post['content_full'];?>		        	
 		        </textarea>
 		        <span class="help-block">aklına güzel bir fikir gelmiş olabilir , bunu bir düşün.</span>
