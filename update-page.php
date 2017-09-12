@@ -9,7 +9,7 @@
  	$id = $_POST["updateId"];
  	$post = getPostById($id);
 
- 	if(isset($_POST["title"]) && isset($_POST["content_full"]) && isset($_POST["tags"]) && isset($_POST["post_image"])){
+ 	if(isset($_POST["title"]) && isset($_POST["content_full"]) && isset($_POST["tags"])){
  		updatePost($_POST["updateId"],$_POST["title"],$_POST["content_full"],$_POST["tags"]);
  		echo "<script> location.href = '/post-panel.php'</script>";
  	}
