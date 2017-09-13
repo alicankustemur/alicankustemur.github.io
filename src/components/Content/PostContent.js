@@ -84,15 +84,19 @@ export default class PostContent extends Component {
 
             // find annotations and colorize
             let pattern = /@\w+/g;
-            preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#BBB529");
+            // preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#BBB529");
 
             // find strings and colorize
             pattern = /"(.*?)"/g;
-            preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#6c975b");
+            //preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#6c975b");
 
             // find methods and colorize
             pattern = /(\s|[.])\w+!?([(])/g;
-            preElementInnerHTML = this.findMethodsAndColorize(preElementInnerHTML,pattern,"#ffc272");
+            //preElementInnerHTML = this.findMethodsAndColorize(preElementInnerHTML,pattern,"#ffc272");
+
+            // find xml and colorize
+            pattern = /&lt;(.*?)&gt;|&lt;\/(.*?)&gt;/g;
+            preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#e8bf6a");
 
 
             preElements[i].innerHTML = preElementInnerHTML;
