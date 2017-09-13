@@ -30,7 +30,6 @@ export default class PostContent extends Component {
 
 
     render() {
-
         return (
             <div>
                 <Col lg={9} md={9} sm={12} style={contentStyle} className="post-content">
@@ -42,7 +41,7 @@ export default class PostContent extends Component {
                 <Col lg={12}>
                     <ReactDisqusThread
                         shortname="alicankustemur-github-io-blog"
-                        identifier="alicankustemur-github-io-blog"
+                        identifier={window.location.href}
                         url="https://alicankustemur-github-io-blog.disqus.com"
                     />
                 </Col>
@@ -84,15 +83,15 @@ export default class PostContent extends Component {
 
             // find annotations and colorize
             let pattern = /@\w+/g;
-            // preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#BBB529");
+             preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#BBB529");
 
             // find strings and colorize
             pattern = /"(.*?)"/g;
-            //preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#6c975b");
+            preElementInnerHTML = this.findAndColorize(preElementInnerHTML,pattern,"#6c975b");
 
             // find methods and colorize
             pattern = /(\s|[.])\w+!?([(])/g;
-            //preElementInnerHTML = this.findMethodsAndColorize(preElementInnerHTML,pattern,"#ffc272");
+            preElementInnerHTML = this.findMethodsAndColorize(preElementInnerHTML,pattern,"#ffc272");
 
             // find xml and colorize
             pattern = /&lt;(.*?)&gt;|&lt;\/(.*?)&gt;/g;
