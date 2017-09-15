@@ -30,21 +30,9 @@ function addPost($title, $content_full, $tags) {
     if ($title != null && $content_full != null && $tags != null) {
         $connection = getConnection();
         $query = $connection->prepare("INSERT INTO post(title,content_full,content_half,tags,link,date) VALUES(?,?,?,?,?,?)");
-        $content_half = substr($content_full, 0, 500);
-        $content_half .= "...";
-        $willRemovedTextArray = [];
-        array_push($willRemovedTextArray,"<br/>");
-        array_push($willRemovedTextArray,"<strong>");
-        array_push($willRemovedTextArray,"<strong/>");
-        array_push($willRemovedTextArray,"<a>");
-        array_push($willRemovedTextArray,"<a/>");
-
-        foreach ($willRemovedTextArray as $text) {
-            $content_half .= removeTextFromContent($text,$content_half);
-        }
-
-
-        $content_half .= "...";
+        $content_half = "<div style='fontSize=15px !important; text-decoration: none !important;'>";
+        $content_half .= substr(strip_tags($content_full), 0, 500);
+        $content_half .= "... </div>";
         $query->bind_param("ssssss", $title, $content_full, $content_half, $tags ,permalink($title), time());
         $query->execute();
         $connection->close();
