@@ -99,6 +99,6 @@ border-radius: 25px 10px / 10px 25px;
 	background-color: #9c6caf !important;
 }
 
-.navbar-default{
+.navbar-default, .btn-default{
 	background-color: #3E3D3C !important;
 }
