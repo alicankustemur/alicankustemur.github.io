@@ -36,7 +36,7 @@
 
 .to-top{
   padding: 10px;
-  background-color: #222222;
+  background-color: #3E3D3C;
   color: #fff;
   text-decoration: none;
   z-index: 1;
@@ -92,4 +92,13 @@
 	 box-shadow: 8px 8px 10px #aaa;
 -moz-border-radius: 25px 10px / 10px 25px;
 border-radius: 25px 10px / 10px 25px;
+}
+
+
+.progress-bar-info{
+	background-color: #9c6caf !important;
+}
+
+.navbar-default{
+	background-color: #3E3D3C !important;
 }
