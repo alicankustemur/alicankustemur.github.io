@@ -27,6 +27,8 @@ export default class Content extends Component {
 
     componentDidMount() {
 
+        document.title = "ali can kuştemur | bir programcının hayal dünyası";
+
         let paginationProps = {
             pageLimit: 6,
             postCount: posts.length,

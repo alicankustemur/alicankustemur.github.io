@@ -55,6 +55,11 @@ export default class PostContent extends Component {
     }
 
     componentDidMount() {
+
+        let title = "ali can kuştemur | bir programcının hayal dünyası";
+
+        document.title = this.state.post.title + " - " + title;
+
         let preElements = document.getElementsByTagName("pre");
 
         for (let i = 0; i < preElements.length; i++) {

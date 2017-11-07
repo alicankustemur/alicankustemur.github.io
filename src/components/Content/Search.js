@@ -80,6 +80,9 @@ export default class Search extends Component {
 
 
     componentDidMount() {
+
+        document.title = "ali can kuştemur | bir programcının hayal dünyası";
+
         $(".tag-cloud > span").each((index, value) => {
 
             let oldFontSize = $(value).css("font-size");
