@@ -2,3 +2,7 @@ pre{
     background-color: #3E3D3C;
     color:#ffffff;
 }
+
+.post-content{
+    cursor: pointer;
+}
