@@ -3,7 +3,9 @@ const aStyle = {
     "paddingLeft": "4px"
 }
 
-const footerText = "ali can kuştemur ~ copyleft while( !© ){ print(\"hiçbir hakkı saklı değildir,bilgi paylaştıkça çoğalır\"); }";
+const footerText = "ali can kuştemur ~ copyleft while( !© ){";
+const footerText2 = "print(\"hiçbir hakkı saklı değildir,bilgi paylaştıkça çoğalır\");";
+const footerText3 = "}";
 
 export default class App extends Component {
     render() {
@@ -22,6 +24,8 @@ export default class App extends Component {
                             <a href="#contact" style={aStyle}>· iletişim</a>
                         </p>
                         <p>{footerText}</p>
+                        <p style={{ paddingLeft : "25px" }} >{footerText2}</p>
+                        <p>{footerText3}</p>
                     </div>
                 </footer>
         )
