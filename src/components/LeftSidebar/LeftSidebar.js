@@ -14,7 +14,7 @@ export default class LeftSidebar extends Component {
 
         this.state = {
             developer: "ali can kuştemur",
-            title: "java developer",
+            title: "software developer",
             about: "93 mersin doğumlu, çocukluğunu bilgisayar oyunlarına ve gençliğini " +
             "bilgisayar programlarına adamış bir programcı.plak ve hüzün koleksiyoncusu, " +
             "kahvesever.önceleri müzik prodüktörlüğü ile uğraşıp, bir eğitim seti oluşturan " +

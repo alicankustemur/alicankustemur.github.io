@@ -4,7 +4,7 @@ import {Col, Row} from "react-bootstrap";
 
 const contactRowList = [
     {
-        href: "https://drive.google.com/open?id=0BytHrEwKQAMjZnU2QWNLX3hiMUE",
+        href: "https://drive.google.com/open?id=1Ww1OVS6qRdrMp02Aj_LW9oG9WKPeZB9p",
         icon: "fa-file-pdf-o",
         text: "cv / özgeçmiş"
     },
