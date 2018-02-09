@@ -12,6 +12,7 @@ function getConnection() {
     $db = "blog";
     $connection = new mysqli($host, $username, $pass, $db);
     $connection->set_charset("utf8");
+    $connection->set_charset("utf8");
     
     if (mysqli_connect_errno()) {
         echo (mysqli_connect_error());
